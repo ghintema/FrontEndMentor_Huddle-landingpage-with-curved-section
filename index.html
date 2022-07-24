@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+    
+    * {
+      margin:0px;
+      padding:0px;
+      font-family: "Open Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+    }
+    body{
+      max-width: 375px;
+      margin:auto;
+      border:1px solid red;
+    }
+    div.topline{
+      display:flex;
+      justify-content: space-between;
+      margin:24px 24px 115px;
+    }
+    div.topline > img.logo {
+      width:96px;
+      height: 16px;
+    }
+    button.tryfree {
+      width: 80px;
+      height: 23.5px;
+      font-size: 9.41177px;
+      line-height: 13px;
+      color: #FF52C1;
+      background: #FFFFFF;
+      border: 0.588235px solid #FF52C1;
+      box-shadow: 0px 0px 5px rgba(255, 82, 193, 0.218778);
+      border-radius: 11.7647px;
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      color: #00252E;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 36px;
+      margin:0px 40px;
+    }
+    .calltoaction > p {margin:30px 40px 48px}
+
+    button.getstarted {
+      width: 200px;
+      height: 40px;
+      background: #FF52C1;
+      box-shadow: 0px 3px 7px rgba(0, 37, 46, 0.223053);
+      border-radius: 20px;
+      border:none;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 18px;
+      color: #FFFFFF;
+    }
+
+    img.calltoaction {
+      width:calc(100% - 80px); /* growing insie the margin */
+      margin:104px 40px 120px;
+    }
+
+    div.references{
+      display:flex;
+      flex-wrap: wrap;
+      align-content:space-between;
+      justify-content: center;
+      width: 250px;
+      margin:auto;
+      height: 356px;
+    }
+    div.sort{
+      position:relative;
+    
+      
+      height: auto;
+    }
+
+    div.sort > img.icon {
+      Position:absolute;
+      left:0px;
+      width:30px;
+      height: 30px;
+    }
+
+    div.sort > p.figure {
+      font-weight: 700;
+      font-size: 60.9524px;
+      line-height: 91px;
+      margin-top:20px;
+    }
+    div.sort > p.figure2 {
+      font-weight: 700;
+      font-size: 53.5192px;
+      line-height: 80px;
+      margin-top:20px;
+    }
+    div.sort > p.category {
+      font-size: 13.3798px;
+      line-height: 20px;
+      text-align: center;
+      color: #808E9A;
+    }
+    
+    
+    
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topline">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <button class="tryfree">Try it free</button>
+    </div>
+    <div class="calltoaction">
+      <h1>Build The Community Your Fans Will Love</h1>
+      <p>Huddle re-imagines the way we build communities. You have a voice, but so does 
+        your audience. Create connections with your users as you engage in genuine discussion. </p>
+      <button class="getstarted">Get Started For Free</button>
+      <img class="calltoaction" src="images/screen-mockups.svg" alt="screen-mockups">
+    </div>
+  </header>
+  <main>
+    <div class="references">
+      <div class="sort">
+        <img class="icon" src="images/icon-communities.svg" alt="icon communities">
+        <p class="figure">1.4k+</p>
+        <p class="category">Communities Formed</p>
+      </div>
+      <div class="sort">
+        <img class="icon" src="images/icon-messages.svg" alt="icon messages">
+        <p class="figure2">2.7m+</p>
+        <p class="category">Messages Sent</p>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <img class="illustration" id="growtogether" src="images/illustration-grow-together.svg" alt="illustration grow together">
+      <div class="description"  id="growtogehter">
+        <h3>Grow Together</h3>
+        <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
+          Think of the insightful conversations you miss out on with a feedback form. 
+        </p> 
+      </div>
+      <img class="illustration" id="flowingconversation" src="images/illustration-flowing-conversation.svg" alt="illustration flowing conversation">
+      <div class="description"  id="flowingconversation">
+        <h3>Flowing conversation</h3>
+        <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+          just-in-time loading for a more natural flow.
+        </p> 
+      </div>
+      <img class="illustration" id="yourusers" src="images/illustration-your-users.svg" alt="illustration your users">
+      <div class="description"  id="yourusers">
+        <h3>Your Users</h3>
+        <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+          once signed in to your app, your users can start chatting immediately.
+        </p> 
+      </div>
+    </div>
+  
+    <div class="readytobuild">
+      <h2>Ready To Build Your Community?</h2>
+      <button class="getstarted">Get Started For Free</button>
+    </div>
+  </main>
+  <footer>
+    <div class="newsletter">
+      <h3>Newsletter</h3>
+      <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
+        send you spam or pass on your email address</p>
+      <form>??????</form>
+      <button class="subsribe">Subscribe</button>
+    </div>
+    <div class="lorem">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
+        vestibulum a, ultrices quis sem.</p>
+      <div class="phone">
+        <img class="iconphone" src="images/icon-phone.svg" alt="icon phone">
+        <p>Phone: +1-543-123-4567</p>
+      </div>
+      <div class="email">
+        <img class="iconemail" src="images/icon-email.svg" alt="icon email">
+        <p>example@huddle.com</p>
+      </div>
+      <div class="socialmedia">
+        <img class="iconsocialmedia" src="images/icon-facebook.svg" alt="icon facebook">
+        <img class="iconsocialmedia" src="images/icon-instagram.svg" alt="icon instagram">
+        <img class="iconsocialmedia" src="images/icon-twitter.svg" alt="icon twitter">
+      </div>
+    </div>
+    
+
+  </footer>
+
+  
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
+
+
+
+
+/* 1.4k+ */
+
+position: absolute;
+height: 92px;
+left: 0%;
+right: 0%;
+top: calc(50% - 92px/2 - 11.87px);
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 60.9524px;
+line-height: 91px;
+/* identical to box height, or 150% */
+
+color: #00252E;
+
+
+/* 2.7m+ */
+
+position: absolute;
+height: 81px;
+left: 0%;
+right: 0%;
+top: calc(50% - 81px/2 - 11px);
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 53.5192px;
+line-height: 80px;
+/* identical to box height, or 150% */
+
+color: #00252E;
+
