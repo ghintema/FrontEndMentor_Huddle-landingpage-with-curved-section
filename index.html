@@ -79,9 +79,9 @@ footer             14px/24px/600      14px/24px/600
     --fs-xxl: 60px;
 
     --margin-header:24px;
-    --margin-hero:40px;
-    --margin-body:28px;
-    --margin-footer:28px;
+    --margin-hero:0px 40px;
+    --margin-body:0px 28px;
+    --margin-footer:0px 28px;
    }
 
    @media screen and (min-width:1400px) {
@@ -136,11 +136,15 @@ footer             14px/24px/600      14px/24px/600
    .text-center {text-align: center}
    .text-left {text-align: left}
 
+   .clr-button {background-color: var(--clr-btn);}
+
    .margin-header {margin:var(--margin-header)}
    .margin-hero {margin:var(--margin-hero)}
    .margin-body {margin:var(--margin-body)}
    .margin-footer {margin:var(--margin-footer)}
    .margin-auto {margin:auto}
+
+   .width-100 {width: 100%;}
 
    .flex {display:flex}
    .wrap {flex-wrap:wrap}
@@ -158,7 +162,7 @@ footer             14px/24px/600      14px/24px/600
       text-align: center;
     }
     body{
-      max-width: 375px;
+      max-width: 575px;
       margin:auto;
       border:1px solid red;
     }
@@ -173,54 +177,78 @@ footer             14px/24px/600      14px/24px/600
       border-color: #ff52c1;
       background-color: white;
     }
+    h1 {margin: 115px 0px 28px;}
+
     button.get-started {
       width:200px;
       height: 40px;
+      margin:48px 0px 104px;
       border-radius: 20px;
       border:none;
-      background-color: #ff52c1;
       color:white;
     }
-    img.screen-animation {
-      width: 100%;
-      height: auto;
-    }
+    .get-started:hover{background-color: var(--clr-btn-hover) }
+
     .container {
       height: 355px;
+      margin:120px auto;
       align-content: space-between;
       width:min-content;
     }
-    
-    img.icon {
+    .icon-reference {
       float:left;
       width:33px;
     }
+    
+    .statement {
+      background-color: f6fbff;
+      border:1px solid red;
+    }
+
     img.illustration {
       width:280px;
+      margin-bottom:50px;
     }
-    img.footertop {
-      margin-bottom: -4px;
-      width: 100%;
-    }
+    img.footertop {margin-bottom: -4px;}
+    
     footer {
       background-color:#00252e;
       color:white;
     }
+    
     .newsletter{
       font-size: 20px;
+      padding:50px 0px 20px;
     }
-    input.email {
-      width: 320px;
+    
+    #email {
       height: 48px;
       border-radius: 6px;
+      margin:40px auto 20px;
     }
     .subscribe {
-      width: 168px;
+      width: 50%;
       height: 48px;
-      float:right;
+      color:white;
+      border-radius: 5px;
+      margin-left: 50%;
+      margin-bottom:30px;
+    }
+    footer img.logo {
+      width: 200px;
+      height: 32px;
+      color: white;
     }
 
-
+    p.huddle{ font-family: 'Poppins'}
+    .icon-huddle {width: 33px}
+    .contact {margin:24px 0px}
+    .icon-contact {margin-right:20px}
+    
+    .socialicon {
+      background-color: white;
+      margin:30px 20px 45px 0px;   
+    }
     
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -235,66 +263,80 @@ footer             14px/24px/600      14px/24px/600
     <div class="hero margin-hero">
       <h1 class="fs-primary-heading fw-bold">Build The Community Your Fans Will Love</h1>
       <p class="hero fs-hero fw-regular">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. </p>
-      <button class="fs-btn-large fw-bold get-started">Get Started For Free</button>
-      <img src="images/screen-mockups.svg" alt="" class="screen-animation">
+      <button class="get-started fs-btn-large fw-bold clr-button">Get Started For Free</button>
+      <img class="screen-animation width-100" src="images/screen-mockups.svg" alt="illustration of screens" >
     </div>
     <div class="container margin-auto flex wrap juco-cntr">
         <div class="references">
-          <img class="icon" src="images/icon-communities.svg" alt="icon communities">
+          <img class="icon-reference" src="images/icon-communities.svg" alt="icon communities">
           <p class="fs-xxl fw-bold">1.4k+</p>
           <p class="fs-reference fw-regular">Communities Formed</p>
         </div>
         <div class="references">
-          <img class="icon" src="images/icon-messages.svg" alt="icon messages">
+          <img class="icon-reference" src="images/icon-messages.svg" alt="icon messages">
           <p class="fs-xxl fw-bold">2.7m+</p>
           <p class="fs-reference fw-regular">Messages Sent</p>
         </div>
     </div>
-    <div class="promises margin-body">
+    <div class="promises">
+      <img class="width-100" src="images/bg-section-top-mobile-1.svg" alt="">
       <div class="statement">
         <img src="images/illustration-grow-together.svg" alt="illustration grow togehter" class="illustration">
         <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
-        <p class="fs-body fw-regular text-center">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. </p>
+        <p class="fs-body fw-regular text-center margin-body">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. </p>
       </div>
+      <img class="width-100" src="images/bg-section-bottom-mobile-1.svg" alt="">      
       <div class="statement">
         <img src="images/illustration-flowing-conversation.svg" alt="illustration flowing conversations" class="illustration">
         <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
-        <p class="fs-body fw-regular text-center">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+        <p class="fs-body fw-regular text-center margin-body">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
       </div>
       <div class="statement">
         <img src="images/illustration-your-users.svg" alt="illustration Your users" class="illustration">
         <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
-        <p class="fs-body fw-regular text-center">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+        <p class="fs-body fw-regular text-center margin-body">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
       </div>
     </div>
     <div class="calltoaction margin-auto">
       <h2 class="fs-primary-heading">Ready To Build Your Community?</h2>
-      <button class="fs-btn-large fw-bold get-started">Get Started For Free</button>
+      <button class="get-started fs-btn-large fw-bold clr-button">Get Started For Free</button>
     </div>
   </main>
-  <img src="images/bg-footer-top-mobile.svg" alt="" class="footertop">
+  <img class="footertop width-100" src="images/bg-footer-top-mobile.svg" alt="" >
   <footer>
-    <h3 class="fs-600 fw-bold">Newletter</h3>
+    <h3 class="newsletter fs-600 fw-bold margin-footer text-left">Newletter</h3>
     <p class="fs-footer margin-footer text-left">To receive tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email adress.  </p>
-    <form action="" class="margin-footer">
-      <input type="text" class="email">
-      <button class="subscribe fs-500">Subscribe</button>
+    <form action="subscribe to newsletter" class="margin-footer">
+      <input type="text" id="email" class="width-100">
+      <button class="subscribe fs-500 fw-bold clr-button">Subscribe</button>    
     </form>
+    <div class="margin-footer">
+      <p class="huddle text-left fs-800"> <img class="icon-huddle" src="images/icon-messages.svg" alt="icon messages"> Huddle </p>
+      <p class="fs-footer fw-regular text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacina vestibuluma a, ultrices quis sem.</p>
+      <p class="contact fs-footer text-left"><img class="icon-contact" src="images/icon-phone.svg" alt="icon phone" >Phone: +1-543-123-4567</p>
+      <p class="contact fs-footer text-left"><img class="icon-contact" src="images/icon-email.svg" alt="icon email" >example@company.com</p>
+      <div class="flex"> 
+        <img class="socialicon" src="images/icon-facebook.svg" alt="icon facebook" >
+        <img class="socialicon" src="images/icon-instagram.svg" alt="icon icon-instagram" >
+        <img class="socialicon" src="images/icon-twitter.svg" alt="icon twitter">
+      </div>
+    </div>  
+  
+      
+    
+    
     
   </footer>
-</body>
-
-
 
 
   
 
-  <footer>
+  <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
+  </footer> -->
 </body>
 </html>
 
