@@ -84,7 +84,7 @@ footer             14px/24px/600      14px/24px/600
     --margin-footer:0px 28px;
    }
 
-   @media screen and (min-width:1400px) {
+   @media screen and (min-width:1440px) {
     :root {
       --fs-primary-heading: var(--fs-900);
       --fs-secondary-heading: var(--fs-800);
@@ -98,9 +98,9 @@ footer             14px/24px/600      14px/24px/600
       --fs-xxl: 96px;
 
       --margin-header:80px;
-      --margin-hero:212px;
+      --margin-hero:212px;  
       --margin-body:120px;
-      --margin-footer:120px;
+      --margin-footer:0px 120px;
     }
    }
 
@@ -162,7 +162,7 @@ footer             14px/24px/600      14px/24px/600
       text-align: center;
     }
     body{
-      max-width: 575px;
+      max-width: 775px;
       margin:auto;
       border:1px solid red;
     }
@@ -190,26 +190,34 @@ footer             14px/24px/600      14px/24px/600
     .get-started:hover{background-color: var(--clr-btn-hover) }
 
     .container {
+      flex-flow:column;
+      justify-content: space-between;
       height: 355px;
-      margin:120px auto;
-      align-content: space-between;
-      width:min-content;
+      margin:120px 0px;
+      width:100%;
+      border:1px solid red;
     }
     .icon-reference {
-      float:left;
+      position: relative;
+      right:70px;
+      top:20px;
       width:33px;
     }
     
-    .statement {
-      background-color: f6fbff;
-      border:1px solid red;
+    .statement:first-of-type, 
+    .statement:last-of-type {
+      background-color: #f6fbff;
+      margin-top:-5px;
+    }
+    .statement:nth-of-type(2) {
+      margin:100px 0px;
     }
 
-    img.illustration {
+    .illustration {
       width:280px;
       margin-bottom:50px;
     }
-    img.footertop {margin-bottom: -4px;}
+    img.footertop {margin-bottom: -7px;}
     
     footer {
       background-color:#00252e;
@@ -225,6 +233,7 @@ footer             14px/24px/600      14px/24px/600
       height: 48px;
       border-radius: 6px;
       margin:40px auto 20px;
+      width: 100%;
     }
     .subscribe {
       width: 50%;
@@ -240,7 +249,7 @@ footer             14px/24px/600      14px/24px/600
       color: white;
     }
 
-    p.huddle{ font-family: 'Poppins'}
+    .huddle-headline{ font-family: 'Poppins'}
     .icon-huddle {width: 33px}
     .contact {margin:24px 0px}
     .icon-contact {margin-right:20px}
@@ -249,7 +258,72 @@ footer             14px/24px/600      14px/24px/600
       background-color: white;
       margin:30px 20px 45px 0px;   
     }
+
+
+    @media screen and (min-width:1440px) {
+      body{
+        max-width: 1440px;
+        margin:auto;
+        border:1px solid red;
+        
+      }
+      .container {
+        width:auto;
+        height: auto;
+        justify-content: space-around;
+        flex-direction:row;
+        margin:120px 20px;
+      }
+      .statement {
+        display:flex;
+        flex-flow:row;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .statement:nth-of-type(2) > .illustration{order:2}
+
+      .illustration {width:560px;}
+      
+      .description p {
+        width: 520px;
+        margin:40px 0px;
+        text-align: left;
+      }
+
+      .description h3 {text-align: left}
+
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border:1px solid red;
+        padding-top:100px;
+      }
+      .huddle {
+        width: 40%;
+        border:1px solid red;
+      }
+      .get-newsletter {
+        order:2;
+        width:40%;
+        border:1px solid red;
+      }
+      .newsletter{
+        font-size: 24px;
+        padding:0px 0px 15px
+      }
+      #email {
+        width:60%;
+        float:left;
+      }
+      .subscribe {
+        width: 30%;
+        margin:40px 0px;
+      }
+    }
     
+   
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -266,7 +340,7 @@ footer             14px/24px/600      14px/24px/600
       <button class="get-started fs-btn-large fw-bold clr-button">Get Started For Free</button>
       <img class="screen-animation width-100" src="images/screen-mockups.svg" alt="illustration of screens" >
     </div>
-    <div class="container margin-auto flex wrap juco-cntr">
+    <div class="container flex">
         <div class="references">
           <img class="icon-reference" src="images/icon-communities.svg" alt="icon communities">
           <p class="fs-xxl fw-bold">1.4k+</p>
@@ -281,21 +355,29 @@ footer             14px/24px/600      14px/24px/600
     <div class="promises">
       <img class="width-100" src="images/bg-section-top-mobile-1.svg" alt="">
       <div class="statement">
-        <img src="images/illustration-grow-together.svg" alt="illustration grow togehter" class="illustration">
-        <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
-        <p class="fs-body fw-regular text-center margin-body">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. </p>
+        <img class="illustration" src="images/illustration-grow-together.svg" alt="illustration grow togehter" >
+        <div class="description">
+          <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
+          <p class="fs-body fw-regular text-center margin-body">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. </p>
+        </div>
       </div>
       <img class="width-100" src="images/bg-section-bottom-mobile-1.svg" alt="">      
       <div class="statement">
-        <img src="images/illustration-flowing-conversation.svg" alt="illustration flowing conversations" class="illustration">
-        <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
-        <p class="fs-body fw-regular text-center margin-body">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+        <img class="illustration" src="images/illustration-flowing-conversation.svg" alt="illustration flowing conversations" >
+        <div class="description">
+          <h3 class="fs-secondary-heading fw-bold">Flowing Conversations</h3>
+          <p class="fs-body fw-regular text-center margin-body">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+        </div>
       </div>
+      <img class="width-100" src="images/bg-section-top-mobile-2.svg" alt="">
       <div class="statement">
-        <img src="images/illustration-your-users.svg" alt="illustration Your users" class="illustration">
-        <h3 class="fs-secondary-heading fw-bold">Grow Togehter</h3>
-        <p class="fs-body fw-regular text-center margin-body">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+        <img class="illustration" src="images/illustration-your-users.svg" alt="illustration Your users" >
+        <div class="description">
+          <h3 class="fs-secondary-heading fw-bold">Your Users</h3>
+          <p class="fs-body fw-regular text-center margin-body">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+        </div>
       </div>
+      <img class="width-100" src="images/bg-section-bottom-mobile-2.svg" alt="">      
     </div>
     <div class="calltoaction margin-auto">
       <h2 class="fs-primary-heading">Ready To Build Your Community?</h2>
@@ -304,21 +386,25 @@ footer             14px/24px/600      14px/24px/600
   </main>
   <img class="footertop width-100" src="images/bg-footer-top-mobile.svg" alt="" >
   <footer>
-    <h3 class="newsletter fs-600 fw-bold margin-footer text-left">Newletter</h3>
-    <p class="fs-footer margin-footer text-left">To receive tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email adress.  </p>
-    <form action="subscribe to newsletter" class="margin-footer">
-      <input type="text" id="email" class="width-100">
-      <button class="subscribe fs-500 fw-bold clr-button">Subscribe</button>    
-    </form>
-    <div class="margin-footer">
-      <p class="huddle text-left fs-800"> <img class="icon-huddle" src="images/icon-messages.svg" alt="icon messages"> Huddle </p>
-      <p class="fs-footer fw-regular text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacina vestibuluma a, ultrices quis sem.</p>
-      <p class="contact fs-footer text-left"><img class="icon-contact" src="images/icon-phone.svg" alt="icon phone" >Phone: +1-543-123-4567</p>
-      <p class="contact fs-footer text-left"><img class="icon-contact" src="images/icon-email.svg" alt="icon email" >example@company.com</p>
-      <div class="flex"> 
-        <img class="socialicon" src="images/icon-facebook.svg" alt="icon facebook" >
-        <img class="socialicon" src="images/icon-instagram.svg" alt="icon icon-instagram" >
-        <img class="socialicon" src="images/icon-twitter.svg" alt="icon twitter">
+    <div class="footer margin-footer">
+      <div class="get-newsletter">
+        <h3 class="newsletter fs-600 fw-bold text-left">Newsletter</h3>
+        <p class="fs-footer text-left">To receive tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email adress.  </p>
+        <form action="subscribe to newsletter">
+          <input type="text" id="email">
+          <button class="subscribe fs-500 fw-bold clr-button">Subscribe</button>    
+        </form>
+      </div>
+      <div class="huddle">
+        <p class="huddle-headline text-left fs-800"> <img class="icon-huddle" src="images/icon-messages.svg" alt="icon messages"> Huddle </p>
+        <p class="fs-footer fw-regular text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacina vestibuluma a, ultrices quis sem.</p>
+        <p class="contact fs-footer text-left"><img class="icon-contact" src="images/icon-phone.svg" alt="icon phone" >Phone: +1-543-123-4567</p>
+        <p class="contact fs-footer text-left"><img class="icon-contact" src="images/icon-email.svg" alt="icon email" >example@company.com</p>
+        <div class="flex"> 
+          <img class="socialicon" src="images/icon-facebook.svg" alt="icon facebook" >
+          <img class="socialicon" src="images/icon-instagram.svg" alt="icon icon-instagram" >
+          <img class="socialicon" src="images/icon-twitter.svg" alt="icon twitter">
+        </div>
       </div>
     </div>  
   
