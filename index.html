@@ -84,6 +84,23 @@ footer             14px/24px/600      14px/24px/600
     --margin-footer:0px 28px;
    }
 
+   @media screen and (min-width:500px) {
+    :root {
+      --fs-primary-heading: var(--fs-800);
+      --fs-secondary-heading: var(--fs-600);
+      --fs-header: var(--fs-500);
+      --fs-hero: var(--fs-500);
+      --fs-reference: var(--fs-400);
+      --fs-body: var(--fs-400);
+      --fs-footer: var(--fs-400);
+      --fs-btn-lrg: var(--fs-300);
+      --fs-btn-sml: var(--fs-200);
+      --fs-xxl: 60px;
+
+      
+    }
+  }
+
    @media screen and (min-width:1440px) {
     :root {
       --fs-primary-heading: var(--fs-900);
@@ -98,7 +115,7 @@ footer             14px/24px/600      14px/24px/600
       --fs-xxl: 96px;
 
       --margin-header:80px;
-      --margin-hero:212px;  
+      --margin-hero:0px 212px;  
       --margin-body:120px;
       --margin-footer:0px 120px;
     }
@@ -162,14 +179,16 @@ footer             14px/24px/600      14px/24px/600
       text-align: center;
     }
     body{
+      position: relative;
       max-width: 775px;
       margin:auto;
-      border:1px solid red;
     }
     img.logo {
       width: 96px;
       height: 16px;
     }
+
+
     button.try-it-free {
       width:80px;
       height: 24px;
@@ -187,6 +206,10 @@ footer             14px/24px/600      14px/24px/600
       border:none;
       color:white;
     }
+    .try-it-free:hover {
+      color:#ff8ed7;
+      border-color: #ff8ed7;}
+
     .get-started:hover{background-color: var(--clr-btn-hover) }
 
     .container {
@@ -195,7 +218,6 @@ footer             14px/24px/600      14px/24px/600
       height: 355px;
       margin:120px 0px;
       width:100%;
-      border:1px solid red;
     }
     .icon-reference {
       position: relative;
@@ -243,6 +265,8 @@ footer             14px/24px/600      14px/24px/600
       margin-left: 50%;
       margin-bottom:30px;
     }
+    .subscribe:hover{background-color: var(--clr-btn-hover) }
+
     footer img.logo {
       width: 200px;
       height: 32px;
@@ -262,10 +286,24 @@ footer             14px/24px/600      14px/24px/600
 
     @media screen and (min-width:1440px) {
       body{
-        max-width: 1440px;
+        max-width: 1640px;
         margin:auto;
-        border:1px solid red;
         
+      }
+      img.logo {
+        width:240px;
+        height: 38px;
+      }
+      button.try-it-free {
+        width:136px;
+        height: 40px;
+        border-radius: 20px;
+        }
+
+      button.get-started {
+        width:400px;
+        height: 80px;
+        border-radius: 40px;
       }
       .container {
         width:auto;
@@ -280,7 +318,12 @@ footer             14px/24px/600      14px/24px/600
         align-items: center;
         justify-content: space-around;
       }
-      .statement:nth-of-type(2) > .illustration{order:2}
+      .statement:nth-of-type(2n-1) > .illustration{order:2}
+
+      #top1{content: url("images/bg-section-top-desktop-1.svg");}
+      #top2{content: url("images/bg-section-top-desktop-2.svg");}
+      #bottom1{content: url("images/bg-section-bottom-desktop-1.svg");}
+      #bottom2{content: url("images/bg-section-bottom-desktop-2.svg");}
 
       .illustration {width:560px;}
       
@@ -289,25 +332,21 @@ footer             14px/24px/600      14px/24px/600
         margin:40px 0px;
         text-align: left;
       }
-
       .description h3 {text-align: left}
-
 
       .footer {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        gap:29.1666%; /* 350px / (1440px - 2*120) */ 
         align-items: flex-start;
-        border:1px solid red;
         padding-top:100px;
       }
       .huddle {
-        width: 40%;
-        border:1px solid red;
+        width: 320px;
       }
       .get-newsletter {
         order:2;
         width:40%;
-        border:1px solid red;
       }
       .newsletter{
         font-size: 24px;
@@ -353,7 +392,7 @@ footer             14px/24px/600      14px/24px/600
         </div>
     </div>
     <div class="promises">
-      <img class="width-100" src="images/bg-section-top-mobile-1.svg" alt="">
+      <img id="top1" class="width-100" src="images/bg-section-top-mobile-1.svg" alt="">
       <div class="statement">
         <img class="illustration" src="images/illustration-grow-together.svg" alt="illustration grow togehter" >
         <div class="description">
@@ -361,7 +400,7 @@ footer             14px/24px/600      14px/24px/600
           <p class="fs-body fw-regular text-center margin-body">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. </p>
         </div>
       </div>
-      <img class="width-100" src="images/bg-section-bottom-mobile-1.svg" alt="">      
+      <img id="bottom1" class="width-100" src="images/bg-section-bottom-mobile-1.svg" alt="">      
       <div class="statement">
         <img class="illustration" src="images/illustration-flowing-conversation.svg" alt="illustration flowing conversations" >
         <div class="description">
@@ -369,7 +408,7 @@ footer             14px/24px/600      14px/24px/600
           <p class="fs-body fw-regular text-center margin-body">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
         </div>
       </div>
-      <img class="width-100" src="images/bg-section-top-mobile-2.svg" alt="">
+      <img id="top2" class="width-100" src="images/bg-section-top-mobile-2.svg" alt="">
       <div class="statement">
         <img class="illustration" src="images/illustration-your-users.svg" alt="illustration Your users" >
         <div class="description">
@@ -377,7 +416,7 @@ footer             14px/24px/600      14px/24px/600
           <p class="fs-body fw-regular text-center margin-body">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
         </div>
       </div>
-      <img class="width-100" src="images/bg-section-bottom-mobile-2.svg" alt="">      
+      <img id="bottom2" class="width-100" src="images/bg-section-bottom-mobile-2.svg" alt="">      
     </div>
     <div class="calltoaction margin-auto">
       <h2 class="fs-primary-heading">Ready To Build Your Community?</h2>
@@ -391,7 +430,7 @@ footer             14px/24px/600      14px/24px/600
         <h3 class="newsletter fs-600 fw-bold text-left">Newsletter</h3>
         <p class="fs-footer text-left">To receive tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email adress.  </p>
         <form action="subscribe to newsletter">
-          <input type="text" id="email">
+          <input type="email" id="email" placeholder="your email">
           <button class="subscribe fs-500 fw-bold clr-button">Subscribe</button>    
         </form>
       </div>
